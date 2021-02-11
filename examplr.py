@@ -4,7 +4,6 @@ trained_face_data=cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
 # img= cv2.imread("RD.jpg")
 webcam=cv2.VideoCapture(0) #0 means from webcam by default
-key=cv2.waitKey(1)
 
 while True:
     successful_frame_read,frame=webcam.read()
@@ -16,11 +15,12 @@ while True:
 
     # cv2.rectangle(img,(77,98),(233+77,233+98),(0,255,0),2)
 
-    for (x,y,w,h) in face_coordinates:
-        cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),1)
+    # for (x,y,w,h) in face_coordinates:
+    #     cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),1)
 
 
-    cv2.imshow("Face Detector", img)
-    cv2.waitKey()
+    cv2.imshow("Face Detector", greyScaled_img)
+    cv2.waitKey(1)
 
-    print("code compiled")
+
+print("code compiled")    
