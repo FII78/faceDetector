@@ -20,7 +20,10 @@ while True:
 
 
     cv2.imshow("Face Detector", frame)
-    cv2.waitKey(1)
+    key= cv2.waitKey(1)
 
+    if key==81 or key==113:
+        break
+webcam.release()
 
 print("code compiled")    
